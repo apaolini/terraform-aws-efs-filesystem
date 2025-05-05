@@ -47,7 +47,8 @@ data "aws_iam_policy_document" "backup" {
 
     actions = [
       "backup:DescribeBackupVault",
-      "backup:CopyIntoBackupVault"
+      "backup:CopyIntoBackupVault",
+      "backup:TagResource"
     ]
 
     # This will not actually use the default file system, this just prevents various errors
